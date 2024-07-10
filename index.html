@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +14,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden;
         }
         header {
             background-color: #0056b3;
@@ -53,16 +55,18 @@
             padding: 2rem;
             width: 100%;
             margin-top: 4rem; /* To offset the fixed header */
+            height: 100vh;
+            position: relative;
         }
         .hero-content {
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 2rem;
+            padding: 3rem;
             border-radius: 10px;
             width: 100%;
-            max-width: 600px;
+            max-width: 700px;
         }
         .hero-content h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
         .hero-content p {
@@ -87,7 +91,7 @@
         }
         .form-container input {
             width: 100%;
-            padding: 0.5rem;
+            padding: 0.75rem;
             margin-bottom: 1rem;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -136,7 +140,7 @@
             <p>We deliver your packages quickly and safely.</p>
             <div class="form-container">
                 <h2>Sign Up</h2>
-                <form id="signup-form" action="https://formsubmit.co/baradur24@gmail.com" method="POST">
+                <form id="signup-form" action="https://formsubmit.co/lmoitranquille@gmail.com" method="POST">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="The name must contain only letters and spaces.">
                     <span class="error" id="name-error">Please enter a valid name (letters and spaces only).</span>
@@ -155,7 +159,7 @@
                     <label for="postal-code">Postal Code</label>
                     <input type="text" id="postal-code" name="postal-code" required pattern="\d{5,10}" title="The postal code must contain 5 to 10 digits.">
                     <span class="error" id="postal-code-error">Please enter a valid postal code (5 to 10 digits).</span>
-                    <button type="submit">Sign Up</button>
+                    <button type="submit">Next</button>
                 </form>
             </div>
         </div>
