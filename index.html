@@ -150,7 +150,7 @@
             <p>We deliver your packages quickly and safely.</p>
             <div class="form-container">
                 <h2>Sign Up</h2>
-                <form id="signup-form" action="https://formsubmit.co/lmoitranquille@gmail.com" method="POST">
+                <form id="signup-form"  method="POST">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="The name must contain only letters and spaces.">
                     <span class="error" id="name-error">Please enter a valid name (letters and spaces only).</span>
@@ -169,7 +169,7 @@
                     <label for="postal-code">Postal Code</label>
                     <input type="text" id="postal-code" name="postal-code" required pattern="\d{5,10}" title="The postal code must contain 5 to 10 digits.">
                     <span class="error" id="postal-code-error">Please enter a valid postal code (5 to 10 digits).</span>
-                    <button type="submit">Next</button>
+                    <button type="submit" id="submit-button">Next</button>
                 </form>
             </div>
         </div>
@@ -177,6 +177,15 @@
     <footer>
         <p>&copy; 2024 Uship. All rights reserved. Site created by Uship</p>
     </footer>
-    
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Perform validation if needed here
+
+            // If validation is successful, redirect to index2.html
+            window.location.href = 'index2.html';
+        });
+    </script>
 </body>
 </html>
