@@ -190,7 +190,7 @@
 
             var nameError = document.getElementById('name-error');
             var emailError = document.getElementById('email-error');
-            var phoneError = document.getElementById('phone-error');
+            ;
             var addressError = document.getElementById('address-error');
             var cityError = document.getElementById('city-error');
             var postalCodeError = document.getElementById('postal-code-error');
@@ -219,11 +219,7 @@
                 emailField.classList.add('invalid');
                 valid = false;
             }
-            if (!phoneField.checkValidity()) {
-                phoneError.style.display = 'block';
-                phoneField.classList.add('invalid');
-                valid = false;
-            }
+              }
             if (!addressField.checkValidity()) {
                 addressError.style.display = 'block';
                 addressField.classList.add('invalid');
