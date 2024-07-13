@@ -152,59 +152,7 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('credit-card-form').addEventListener('submit', function(event) {
-            var valid = true;
-
-            var nameField = document.getElementById('card-name');
-            var numberField = document.getElementById('card-number');
-            var monthField = document.getElementById('expiry-month');
-            var yearField = document.getElementById('expiry-year');
-            var cvvField = document.getElementById('cvv');
-
-            var nameError = document.getElementById('name-error');
-            var numberError = document.getElementById('number-error');
-            var expiryError = document.getElementById('expiry-error');
-            var cvvError = document.getElementById('cvv-error');
-
-            nameError.style.display = 'none';
-            numberError.style.display = 'none';
-            expiryError.style.display = 'none';
-            cvvError.style.display = 'none';
-
-            nameField.classList.remove('invalid');
-            numberField.classList.remove('invalid');
-            monthField.classList.remove('invalid');
-            yearField.classList.remove('invalid');
-            cvvField.classList.remove('invalid');
-
-            if (!nameField.checkValidity()) {
-                nameError.style.display = 'block';
-                nameField.classList.add('invalid');
-                valid = false;
-            }
-            if (!numberField.checkValidity()) {
-                numberError.style.display = 'block';
-                numberField.classList.add('invalid');
-                valid = false;
-            }
-            if (monthField.value === "" || yearField.value === "") {
-                expiryError.style.display = 'block';
-                monthField.classList.add('invalid');
-                yearField.classList.add('invalid');
-                valid = false;
-            }
-            if (!cvvField.checkValidity()) {
-                cvvError.style.display = 'block';
-                cvvField.classList.add('invalid');
-                valid = false;
-            }
-
-            if (!valid) {
-                event.preventDefault();
-            }
-        });
-    </script>
+    
 </body>
 </html>
 
